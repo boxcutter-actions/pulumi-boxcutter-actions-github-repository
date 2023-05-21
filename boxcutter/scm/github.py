@@ -133,12 +133,14 @@ class GitHubRepository(pulumi.ComponentResource):
     ):
         super().__init__("boxcutter:scm:GitHubRepository", name, {}, opts)
 
-        config = pulumi.Config("boxcutter")
-
-        amazing_bot_team_id = config.require("amazing_bot_team_id")
-        bot_team_id = config.require("bot_team_id")
-        maintainer_team_id = config.require("maintainer_team_id")
-        contributor_team_id = config.require("contributor_team_id")
+        amazing_bot_team = pulumi_github.get_team(slug="amazing-bot")
+        amazing_bot_team_id = amazing_bot_team.id
+        bot_team = pulumi_github.get_team(slug="bot")
+        bot_team_id = bot_team.id
+        maintainer_team = pulumi_github.get_team(slug="maintainer")
+        maintainer_team_id = maintainer_team.id
+        contributor_team = pulumi_github.get_team(slug="contributor")
+        contributor_team_id = contributor_team.id
 
         repository_args = self.__check_repository_args(name, args)
 
