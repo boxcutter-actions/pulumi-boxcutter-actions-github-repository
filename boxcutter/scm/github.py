@@ -138,9 +138,9 @@ class GitHubRepository(pulumi.ComponentResource):
         bot_team = pulumi_github.get_team(slug="bot")
         bot_team_id = bot_team.id
         maintainer_team = pulumi_github.get_team(slug="maintainer")
-        maintainer_team_id = engineering_team.id
+        maintainer_team_id = maintainer_team.id
         contributor_team = pulumi_github.get_team(slug="contributor")
-        contributor_team_id = engineering_team.id
+        contributor_team_id = contributor_team.id
 
         repository_args = self.__check_repository_args(name, args)
 
