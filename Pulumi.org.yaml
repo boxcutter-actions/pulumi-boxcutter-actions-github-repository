@@ -1,0 +1,4 @@
+config:
+  github:owner: boxcutter
+  github:token:
+    secure: AAABALWd+w7G/x1J/LJ2eTJlJOdUOh4c4xPLj493z6eHBDDJ2PHs/cGm1uWUCfHC9MUJJiwWsWtGH5kmh622mENtK6eokvAd

@@ -1,0 +1,6 @@
+name: pulumi-boxcutter-actions-github-repository
+runtime:
+  name: python
+  options:
+    virtualenv: venv
+description: Manage GitHub repositories in the boxcutter-actions org with pulumi
