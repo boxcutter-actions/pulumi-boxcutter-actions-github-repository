@@ -5,7 +5,5 @@ from boxcutter.scm.github import GitHubRepository, GitHubRepositoryArgs
 
 GitHubRepository(
     "test-kitchen",
-    GitHubRepositoryArgs(
-        description="Test Kitchen GitHub Action"
-    ),
+    GitHubRepositoryArgs(description="Test Kitchen GitHub Action"),
 )
