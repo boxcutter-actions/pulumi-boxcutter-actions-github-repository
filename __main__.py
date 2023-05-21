@@ -1,4 +1,4 @@
-"""Manage boxcutter-actions org"""
+"""Manage boxcutter-actions org """
 
 import pulumi_github
 from boxcutter.scm.github import GitHubRepository, GitHubRepositoryArgs
